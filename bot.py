@@ -63,7 +63,7 @@ async def process_receipt(update: Update, context: ContextTypes.DEFAULT_TYPE):
         image = Image.open(photo_path)
         
         response = client_gemini.models.generate_content(
-            model='gemini-3.6-flash',
+            model='gemini-2.5-flash',
             contents=[image, PROMPT_OCR],
             config=types.GenerateContentConfig(
                 response_mime_type="application/json"
